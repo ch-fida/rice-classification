@@ -1,6 +1,6 @@
 # Rice Classifier 🍚 | Image-based Rice Variety Detection with Deep Learning
 
-[![HF Space](https://img.shields.io/badge/Try%20Demo-HuggingFace-blue.svg)](https://huggingface.co/spaces/chfida/Rice-Classification)
+[![HF Space](https://img.shields.io/badge/Try%20Demo-HuggingFace-blue.svg)](https://huggingface.co/spaces/chfida/rice-classification)
 
 This project demonstrates a **deep learning-based image classifier** trained to detect and classify rice grains into five distinct varieties. This model is particularly useful for automated quality checks, research, and agricultural supply chain validation.
 
@@ -10,13 +10,13 @@ This project demonstrates a **deep learning-based image classifier** trained to 
 
 Test the model live using Hugging Face Spaces:
 
-🔗 **Demo Link**: [Rice Classification Model](https://huggingface.co/spaces/chfida/Rice-Classification)
+🔗 **Demo Link**: [Rice Classification Model](https://huggingface.co/spaces/chfida/rice-classification)
 
 📦 **Embed iFrame** (for websites or dashboards):
 
 ```html
 <iframe
-  src="https://chfida-Rice-Classification.hf.space"
+  src="https://chfida-rice-classification.hf.space"
   frameborder="0"
   width="100%"
   height="500">
@@ -87,14 +87,14 @@ norm_image = (image - np.min(image)) / (np.max(image) - np.min(image))
 ### 🖱️ Option 1: Try in Browser
 Upload your rice image using the live demo on Hugging Face:
 
-🔗 [Try the Live Demo](https://chfida-Rice-Classification.hf.space)
+🔗 [Try the Live Demo](https://chfida-rice-classification.hf.space)
 
 📌 Tip: Use an image with a black background for best prediction accuracy.
 ### 🧩 Option 2: Programmatic Access via Gradio Client
 ```python
 from gradio_client import Client, handle_file
 
-client = Client("chfida/Rice-Classification")
+client = Client("chfida/rice-classification")
 result = client.predict(
     image=handle_file("your_image.jpg"),  # Replace with path to your image
     api_name="/classify"
